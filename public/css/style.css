@@ -34,13 +34,7 @@ _______________________________________
 }
 
 header {position:sticky; top:0; z-index:1;}
-footer {
-  padding-top: 3rem;  padding-bottom: 3rem;
-  background:#222222; color:#ffffff;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
+footer { padding:3rem 0 ; }
+footer p { margin-bottom: .25rem; }
 
 .kakaoTalk_btn {position: sticky; display:flex; flex-flow:row-reverse; bottom:20px; margin-right:20px; z-index: 1;}
