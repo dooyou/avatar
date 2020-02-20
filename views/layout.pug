@@ -12,16 +12,19 @@ html(lang="en")
           .row
             .col-sm-8.col-md-7.py-4
               h4.text-white About
-              p.text-muted Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.
+              p.text-muted I am passionate about web application development, technology and design. I have a hardwired desire to be better, an instinct for good design, a strong ambition to make a difference on the web, embarrassing hang-ups on semantics, and evangelistic tendencies.
             .col-sm-4.offset-md-1.py-4
-              h4.text-white contact
+              h4.text-white Contact
               ul.list-unstyled
-                -for(let l=0; l<3; l++)
-                  li
-                    a(href='#' class="text-white") Follow on instagram
+                li
+                  a(href='test' class="text-white") Test Page
+                li
+                  a(href='https://instagram.com' class="text-white") Instagram  
+                li
+                  a(href='http://naver.com' class="text-white") Naver
       .navbar.navbar-dark.bg-dark.shadow-sm
         .container.d-flex.justify-content-between            
-          a(href="#" class="navbar-brand d-flex align-items-center")
+          a(href="/" class="navbar-brand d-flex align-items-center")
             svg(xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false")
               path(d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z")
               circle(cx="12" cy="13" r="4")
@@ -30,12 +33,19 @@ html(lang="en")
              span.navbar-toggler-icon 
     #section
       block content
-        
+      .kakaoTalk_btn
+        a(href='javascript:void chatChannel()')
+          img(src='https://developers.kakao.com/assets/img/about/logos/channel/consult_small_yellow_pc.png' alt='카카오톡 상담')    
     footer.text-muted
       .container
         p.float-right 
           a(href='#') Back to top
         p Album example is © Bootstrap, but please download and customize it for yourself!
         p dooyou
+        
+        
   script(src='js/jQuery/jquery.min.js')    
   script(src='js/bootstrap/bootstrap.min.js')
+  script(src='//developers.kakao.com/sdk/js/kakao.min.js')
+  script(src='js/kakaoTalk.js')
+    

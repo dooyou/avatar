@@ -1,10 +1,13 @@
 extends layout
 
-block header
-  h1= title
-
-
 block content
-  p Welcome to #{title}
-  div
-    a(href="/") index
+  main(role="main")
+    section.jumbotron.text-center
+      .container
+        h1 This is #{title} page
+        div
+          a(href="/") Back to Index
+  .album.py-5.bg-light
+    .container
+      .row    
+        

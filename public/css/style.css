@@ -42,3 +42,5 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
+
+.kakaoTalk_btn {position: sticky; display:flex; flex-flow:row-reverse; bottom:20px; margin-right:20px; z-index: 1;}
