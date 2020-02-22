@@ -32,6 +32,8 @@ _______________________________________
 .jumbotron .container {
   max-width: 40rem;
 }
+.card img{ width:100%;   
+}
 
 header {position:sticky; top:0; z-index:1;}
 footer { padding:3rem 0 ; }
