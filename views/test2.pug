@@ -1,0 +1,77 @@
+extends layout
+
+block content
+  #section
+    .css-slider-wrapper
+      input(type="radio" name="slider" class="slide-radio1" checked id="slider_1")
+      input(type="radio" name="slider" class="slide-radio2" id="slider_2")
+      input(type="radio" name="slider" class="slide-radio3" id="slider_3")
+      input(type="radio" name="slider" class="slide-radio4" id="slider_4")
+      
+      .slider-pagination
+        label(for="slider_1" class="page1")
+        label(for="slider_2" class="page2")
+        label(for="slider_3" class="page3")
+        label(for="slider_4" class="page4")  
+      
+      -for(let j=1; j<5; j++)
+        .slider(class='slide-'+ j)
+          img.image(src='images/model-'+ j +'.png' alt='model-'+ j)
+          .slider-content
+            h4 New Product
+            h2 Denim Longline T-Shirt Dress With Split
+            button(type="button" class="buy-now-btn" name="button") $130
+          .number-pagination
+            span #{j}
+          
+  .container       
+    .album.py-5
+      .container
+        .row
+          -for (let i=0; i<3; i++)
+            .col-md-4
+              .card.mb-4.shadow-sm
+                svg(class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail")
+                  title Placeholder
+                  rect(width="100%" height="100%" fill="#55595c")
+                  text(x="50%" y="50%" fill="#eceeef" text-anchor="middle" alignment-baseline="middle") Thumbnail
+                  .card-body
+                    p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    .d-flex.justify-content-between.align-items-center
+                      .btn-group
+                        button(type='button' name='agreement' class='btn btn-sm btn-outline-secondary') View
+                        button(type='button' name='agreement' class='btn btn-sm btn-outline-secondary') Edit
+                      small.text-muted 9mins
+
+  script.
+    var TIMEOUT = 6000;
+    //- var interval = setInterval(handleNext, TIMEOUT);
+   
+    function handleNext() {
+     
+      var $radios = $('input[class*="slide-radio"]');
+      var $activeRadio = $('input[class*="slide-radio"]:checked');
+     
+      var currentIndex = $activeRadio.index();
+      var radiosLength = $radios.length;
+     
+      $radios
+        .attr('checked', false);
+     
+      if (currentIndex >= radiosLength - 1) {
+     
+        $radios
+          .first()
+          .attr('checked', true);
+     
+      } else {
+     
+        $activeRadio
+          .next('input[class*="slide-radio"]')
+          .attr('checked', true);
+     
+      }
+    }
+        
+        
+          

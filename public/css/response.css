@@ -1,0 +1,24 @@
+/* mobile */
+@media (min-width: 0px) and (max-width: 480px) {
+  section.main {
+    flex-flow:column;
+  }
+  section.main > p > img {
+    width:480px;
+  }
+}
+
+/* tablet */
+@media (min-width: 481px) {
+  section.main {
+    height:600px;
+  }
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}

@@ -1,46 +1,50 @@
-extends layout
+doctype html
+html(lang='ko')
+  head
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title= title
+    link(rel='stylesheet', href='/css/bootstrap/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/index.css')
+    link(rel='stylesheet', href='/css/response.css')
 
+  body
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    nav(class='navbar navbar-expand-sm bg-light justify-content-center')
+      <!-- Links -->
+      ul.navbar-nav
+        li.nav-item
+          a(class="nav-link" href="#") About Me
+        li.nav-item
+          a(class="nav-link" href="#") Works
+        li.nav-item
+          a(class="nav-link" href="#") SNS
+        li.nav-item
+          a(class="nav-link" href="test_scope") test_scope
 
-block content
-  main(role="main")
-    section.jumbotron.text-center
-      .container
-        h1 Welcome to #{title}
-        p.ead.text-muted Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.
-        p
-          a(href='test' class="btn btn-primary my-2") go testPage
-          |&nbsp;
-          a(href='#' class="btn btn-secondary my-2") Secondary action
-  .album.py-5.bg-light
-    .container
-      .row
-        -albumList.forEach((item, i) => {
-          - const rdate = (item.releasedate).toLocaleString();
-          - const photo = 'images/'+(item.photo);
-          .col-md-4
-            .card.mb-4.shadow-sm
-              img.image(src='/'+ photo)
-              .card-body
-                p.card-text #{item.contents}
-                .d-flex.justify-content-between.align-items-center
-                  .btn-group
-                    button(type='button' name='agreement' class='btn btn-sm btn-outline-secondary') View
-                    button(type='button' name='agreement' class='btn btn-sm btn-outline-secondary') Edit
-                  small.text-muted  #{rdate}
-        -});
-        
-        //- -for (let i=0; i<3; i++)
-        //-   .col-md-4
-        //-     .card.mb-4.shadow-sm
-        //-       svg(class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail")
-        //-         title Placeholder
-        //-         rect(width="100%" height="100%" fill="#55595c")
-        //-         text(x="50%" y="50%" fill="#eceeef" text-anchor="middle" alignment-baseline="middle") Thumbnail
-        //-         .card-body
-        //-           p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-        //-           .d-flex.justify-content-between.align-items-center
-        //-             .btn-group
-        //-               button(type='button' name='agreement' class='btn btn-sm btn-outline-secondary') View
-        //-               button(type='button' name='agreement' class='btn btn-sm btn-outline-secondary') Edit
-        //-             small.text-muted 9mins
+    header 
+    section(class='main')
+      article.imgg 
+        p introducing me
+        h1 Hello, I’m Dooyou.
+        p  I am passionate about web application development, technology, art, design and typography.
+        p  I build web apps for devices, big and small. I have a hardwired desire to be better, an instinct for good design, a strong ambition to make a difference on the web, embarrassing hang-ups on semantics, and evangelistic tendencies.
+      article
+          img(src='http://adidas03316.cafe24.com/wp-content/uploads/2019/12/app-marketing-illustration-01-1.png')
+      
+script.      
+  let variable = 'cake';
+  let variable = 'cookie';
+  document.write(`<h1>${variable}</h1>`);
+         
+    //- .kakaoTalk_btn
+    //-   a(href='javascript:void chatChannel()')
+    //-     img(src='/images/question_small_yellow_pc.png' alt='카카오톡 문의')        
+  script(src='js/jQuery/jquery.js')    
+  script(src='js/bootstrap/bootstrap.min.js')
+  script(src='//developers.kakao.com/sdk/js/kakao.min.js')
+  script(src='js/kakaoTalk.js')
   
+  
+    
+    
+    

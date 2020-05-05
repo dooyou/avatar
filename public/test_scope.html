@@ -1,0 +1,23 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>scope</title>
+</head>
+<body>
+  <ul>
+    <li> 클릭하면 0</li>
+    <li> 클릭하면 1</li>
+    <li> 클릭하면 2</li>
+  </ul>
+</body>
+<script>
+  const item = document.querySelectorAll('li');
+  for(var i = 0; i < item.length; i++){
+    items[i].addEventListener('click', () => {
+      alert(i);
+    })
+  }
+</script>
+</html>

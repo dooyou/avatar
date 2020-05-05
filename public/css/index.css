@@ -1,0 +1,25 @@
+section.main{
+  position:relative;
+  padding:4rem 2rem 0;
+  width:100%;
+  background: linear-gradient(-20deg, rgba(255,190,190,1) 0%, rgba(190,221,255,1) 100%);
+  color:#ffffff;
+  display:flex;
+  flex-flow: row no-wrap;
+  }
+
+section.main p:nth-child(1){
+  text-transform: uppercase;
+}
+/* section.main p.imgCase{
+  margin-right:0!important;
+} */
+article.imgg {
+  display:flex;
+  flex-direction:column;
+}
+img {
+  width:500px/*100vw*/;
+  display:block;
+  bottom:0px;
+}
